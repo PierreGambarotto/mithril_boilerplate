@@ -9,16 +9,14 @@ sur mithril.js.
 
 * [babel](http://babeljs.io) permet d'utiliser es6/ECMASCRIPT2015, et
 assure la traduction vers du es5.
-* le plugn
-  [babel-plugin-mjsx](https://github.com/Naddiseo/babel-plugin-mjsx)
-  permet d'utiliser le format [msx](https://github.com/insin/msx) pour
-  décrire les vues mithril avec du pseudo HTML.
+* les ensembles de plugin babel 
+    * `babel-plugin-transform-react-jsx` : pour traiter du format msx
+    * `babel-preset-es2015`: es6
+    * `babel-preset-react`: syntaxe jsx
 
-Attention, la version 6 de babel vient tout juste de sortir. On
-utilise ici la version 5, le plugin n'étant pas compatible.
 
-La configuration de `babel` est faite par le fichier
-[.babelrc](.babelrc)
+La configuration de `babel` est faite ici par `webpack`, à voir donc dans 
+[webpack.config.js](webpack.config.js).
 
 ### Webpack
 
