@@ -77,8 +77,8 @@ adéquat référençant [client/components/MyComponant.js](client/components/MyC
 
 L'application de démonstration fournie comporte 2 composants mithril.
 
-* [client/components/Home.js]()
-* [client/components/Counter.js]()
+* [client/components/Home.js](client/components/Home.js)
+* [client/components/Counter.js](client/components/Counter.js)
 
 Le fichier principal [client/app.js](client/app.js) montre un exemple
 de l'utilisation du [routage dans mithril](http://mithril.js.org/mithril.route.html).
