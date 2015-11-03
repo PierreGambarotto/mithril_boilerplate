@@ -43,6 +43,12 @@ En particulier, on utilise ici:
   recharcher toute l'application. On utilise ici `ud` pour l'interface
   avec l'API de `webpack`.
 
+La configuration de `webpack` est faite dans
+[webpack.config.js](webpack.config.js).
+
+Le lancement rapide du serveur de développement `webpack-dev-server`
+est défini dans la partie `scripts` du [package.json](package.json).
+
 ## Cycle de développement
 
 L'application principale se trouve dans
@@ -60,3 +66,19 @@ npm run watch
 Il suffit alors de pointer son navigateur vers http://localhost:9000.
 Tout changement dans `app.js` ou dans un des modules chargés à partir
 de `app.js` entraîne alors le rechargement dans le navigateur.
+
+Pour rajouter un composant mithril `MyComposant` dans l'application, il faut :
+
+* le référencer dans [client/app.js](client/app.js), avec un `require`
+adéquat référençant [client/components/MyComponant.js](client/components/MyComponant.js).
+* monter le composant quelque part avec `m.component(…)`
+
+## Application de démonstration
+
+L'application de démonstration fournie comporte 2 composants mithril.
+
+* [client/components/Home.js]()
+* [client/components/Counter.js]()
+
+Le fichier principal [client/app.js](client/app.js) montre un exemple
+de l'utilisation du [routage dans mithril](http://mithril.js.org/mithril.route.html).
