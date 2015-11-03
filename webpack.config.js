@@ -5,7 +5,7 @@ var pkg = require('./package.json');
 var util = require('util');
 
 module.exports = {
-  context: path.join(__dirname, 'client', 'js'),
+  context: path.join(__dirname, 'client'),
   entry: {
     app: ['./app.js']
   },

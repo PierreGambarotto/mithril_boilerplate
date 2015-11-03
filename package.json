@@ -4,7 +4,11 @@
   "description": "Basic environment to develop an application with express.js (backend) and mithril.js (frontend)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prewatch": "npm install",
+    "watch": "webpack-dev-server --content-base ./build/ --inline --hot --port=9000",
+    "build": "webpack -p --config ./webpack.config.js",
+    "prebuild": "npm run clean",
+    "clean": "rimraf $npm_package_config_buildDir && mkdir $npm_package_config_buildDir"
   },
   "config": {
     "buildDir": "build"
@@ -31,6 +35,8 @@
     "imports-loader": "^0.6.4",
     "json-loader": "^0.5.2",
     "mithril": "^0.2.0",
-    "webpack": "^1.12.2"
+    "rimraf": "^2.4.3",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
   }
 }
