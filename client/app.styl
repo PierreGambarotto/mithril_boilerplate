@@ -1,0 +1,16 @@
+@import "bootstrap"
+
+// class of a component
+.home {
+  @extend .form-inline
+  width: 90%
+}
+
+// apply a bootstrap style inside a component
+.home > input {
+  @extend .form-control
+}
+
+// even better : a specific file for each component
+
+@import './components/counter'

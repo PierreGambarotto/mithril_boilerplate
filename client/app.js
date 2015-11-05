@@ -1,8 +1,9 @@
-var m = require('mithril');
-var Counter = require('./components/Counter');
-var Home = require('./components/Home');
+let m = require('mithril');
+let Counter = require('./components/Counter');
+let Home = require('./components/Home');
 let inspect = require('util').inspect;
 require('./index.html');
+require('./app.styl');
 let ud = require('ud') // Hot Module Replacement
 
 m.route.mode = 'hash';
@@ -10,7 +11,7 @@ m.route.mode = 'hash';
 // module is an object defined by webpack listing all the modules
 
 
-var model = {
+let model = ud.defobj(module,{
   page: {
     title: 'Mitril sample',
     updateTitle: (title) => {
@@ -25,13 +26,14 @@ var model = {
       console.log(inspect(model))
     }
   }
-};
+});
 
 ud.defn(module, () => {
-  return m.route(document.body, '/', {
-    '/': m.component(Home, model.page) ,
+  m.route(document.body, '/', {
+    '/': m.component(Home, m.prop(model.page)) ,
     '/counter': m.component(Counter, model.counter)
   })
+  m.route(m.route()) // reload the current route
 })()
                  
 
