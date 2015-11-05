@@ -2,7 +2,7 @@ let m = require('mithril')
 
 let Counter =  {}
 
-
+require('./counter.styl');
 Counter.controller = (model) => ({
   addCount: model.addCount
 })

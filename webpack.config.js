@@ -30,7 +30,8 @@ module.exports = {
       {
         test: /\.styl$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract('css!stylus')
+        loader: 'style!css?sourceMap!stylus?sourceMap'
+//        loader: ExtractTextPlugin.extract('css!stylus')
       },
       {
         test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
