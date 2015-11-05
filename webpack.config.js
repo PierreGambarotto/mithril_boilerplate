@@ -30,7 +30,7 @@ module.exports = {
       {
         test: /\.styl$/,
         exclude: /node_modules/,
-        loader: 'style!css?sourceMap!stylus?sourceMap'
+        loader: 'style!css?sourceMap!stylus?sourceMap&resolve url'
 //        loader: ExtractTextPlugin.extract('css!stylus')
       },
       {
@@ -51,7 +51,7 @@ module.exports = {
   },
   stylus: {
     use: [bootstrap()],
-    'resolve url': true
+//    'resolve url': true
 
   },
   plugins: [
