@@ -85,6 +85,9 @@ Pour rajouter un composant mithril `MyComposant` dans l'application, il faut :
 adéquat référençant [client/components/MyComponant.js](client/components/MyComponant.js).
 * monter le composant quelque part avec `m.component(…)`
 
+La feuille de style du composant est décrite soit dans le fichier `app.styl`, soit dans un fichier 
+spécifique au composant.
+
 ## Application de démonstration
 
 L'application de démonstration fournie comporte 2 composants mithril.
@@ -94,3 +97,7 @@ L'application de démonstration fournie comporte 2 composants mithril.
 
 Le fichier principal [client/app.js](client/app.js) montre un exemple
 de l'utilisation du [routage dans mithril](http://mithril.js.org/mithril.route.html).
+
+Le style CSS pour le composant `Home` est décrit dans le fichier [client/app.styl](client/app.styl).
+
+Le style CSS pour le composant `Counter` est décrit dans un fichier spécifique [client/components/counter.styl](client/components/counter.styl), includ dans le composant avec un `require()`.
