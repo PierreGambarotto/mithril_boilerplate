@@ -47,6 +47,20 @@ La configuration de `webpack` est faite dans
 Le lancement rapide du serveur de développement `webpack-dev-server`
 est défini dans la partie `scripts` du [package.json](package.json).
 
+### Stylus
+
+La gestion des feuilles de style CSS est faite par le préprocesseur [stylus](https://learnboost.github.io/stylus/), qui augmente la syntaxe de base des CSS et permet une meilleur organisation
+des feuilles de style.
+
+Le framework [bootstrap](http://getbootstrap.com/) est utilisé, grâce au paquetage npm [bootstrap-styl](https://github.com/maxmx/bootstrap-stylus).
+
+La compilation et l'intégration des css est entièrement géré par webpack, grâce aux loaders
+
+* [stylus-loader](https://github.com/shama/stylus-loader) : converti une source au format stylus en css
+* [css-loader](https://github.com/webpack/css-loader) : gère les dépendances css (`@import`, `url()`)
+* [style-loader](https://github.com/webpack/style-loader) : applique une feuille de style à un document
+
+
 ## Cycle de développement
 
 L'application principale se trouve dans
