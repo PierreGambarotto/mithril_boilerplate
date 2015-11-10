@@ -21,11 +21,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-	        presets: ['es2015', 'react'],
-          plugins: [["transform-react-jsx", { "pragma": "m" }]]
-	      }
+        loader: 'babel?presets=es2015!msx?harmony=true&precompile=false'
       },
       {
         test: /\.styl$/,
