@@ -16,6 +16,11 @@ module.exports = {
     publicPath: '/',
     filename: 'js/[name].js'
   },
+  devServer: {
+    proxy: {
+      '*': 'http://localhost:3000'
+    }
+  },
   module: {
     loaders: [
       {

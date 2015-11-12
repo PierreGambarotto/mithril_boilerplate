@@ -9,7 +9,7 @@ Counter.controller = (model) => ({
 
 Counter.view = (controller, model) => {
   let actions = controller
-  let count = model.value;
+  let count = model.value();
 
   return (
     <div className="counter">
@@ -17,9 +17,8 @@ Counter.view = (controller, model) => {
       <button onclick={actions.addCount}>
         click me
       </button>
-      <a href="/" config={m.route}>Back Home</a>  
+      <a href="/" config={m.route}>Back Home</a>
     </div>
-      
   );
 }
 

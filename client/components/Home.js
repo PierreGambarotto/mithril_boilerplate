@@ -4,19 +4,20 @@ let Home = {}
 
 Home.controller = (model) => {
   return {
-      updateTitle: model().updateTitle,
-      onunload: () => console.log("unloading Home component")
+    updateTitle: model.updateTitle
   }
 }
 
 Home.view = (controller, model) => {
   let actions = controller;
-    let title = m.prop(model().title)
+  let title = model.title;
 
   return (
     <div className="home">
       <h1> {title()} </h1>
-      <input  oninput={(e) => actions.updateTitle(e.target.value)} value={title()} />
+      <input oninput={(e) => actions.updateTitle(e.target.value)}
+    value={title()} />
+      <button onclick={(e) => model.setFromServer()}>Reset from server</button>
       <p>
         <a href="/counter" config={m.route}>Counter</a>
       </p>
