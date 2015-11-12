@@ -101,3 +101,18 @@ de l'utilisation du [routage dans mithril](http://mithril.js.org/mithril.route.h
 Le style CSS pour le composant `Home` est décrit dans le fichier [client/app.styl](client/app.styl).
 
 Le style CSS pour le composant `Counter` est décrit dans un fichier spécifique [client/components/counter.styl](client/components/counter.styl), includ dans le composant avec un `require()`.
+
+## Partie backend
+
+La commande `npm run backend-dev` lance le code de
+[server/index.js](server/index.js), par défaut sur `localhost:3000`. Le
+serveur de développement de webpack est configuré pour rediriger
+toutes les url inconnues vers ce serveur.
+
+L'application de démo montre une utilisation de code serveur par
+l'utilisation de `m.request()`.
+
+[nodemon](https://github.com/remy/nodemon) est utilisé pour relancer
+automatiquement la partie serveur si un fichier contenu dans le
+répertoire `server` est modifié.
+
