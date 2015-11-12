@@ -21,7 +21,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel?presets=es2015!msx?harmony=true&precompile=false'
+        loader: 'babel?presets=es2015!msx?harmony=false&precompile=false'
       },
       {
         test: /\.styl$/,
